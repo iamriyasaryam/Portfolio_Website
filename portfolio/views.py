@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import SkillCategory, HighlightModel, ProjectModel, ExperienceModel, AchievementModel, ResumeModel
+from django.shortcuts import render, redirect, HttpResponse
+from .models import SkillCategory, HighlightModel, ProjectModel, ExperienceModel, AchievementModel, ResumeModel, ContactModel
 from django.core.mail import send_mail
 from .forms import EmailForm
 from django.conf import settings

@@ -7,4 +7,5 @@ urlpatterns = [
     path('achievements/', views.achievements, name='achievements'),
     path("resume/view/", views.resume_view, name="resume_view"),
     path("resume/download/", views.resume_download, name="resume_download"),
+    path('sendmail/', views.sendmail, name='sendmail'),
 ]
