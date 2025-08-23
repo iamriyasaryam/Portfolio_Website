@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import SkillCategory, SkillModel, HighlightModel, ProjectModel, ExperienceModel, AchievementModel, ResumeModel
+from . models import SkillCategory, SkillModel, HighlightModel, ProjectModel, ExperienceModel, AchievementModel, ResumeModel, ContactModel
 
 # Register your models here.
 
@@ -38,3 +38,7 @@ class AchievementAdmin(admin.ModelAdmin):
 @admin.register(ResumeModel)
 class ResumeAdmin(admin.ModelAdmin):
     list_display = ("id", "updated_at")
+
+@admin.register(ContactModel)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ("name", "email", "message")
