@@ -4,6 +4,7 @@ pymysql.install_as_MySQLdb()
 from pathlib import Path
 from dotenv import load_dotenv
 
+#changes
 # Load environment variables
 load_dotenv()
 
