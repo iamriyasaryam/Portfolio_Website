@@ -121,10 +121,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'server95-90.liteserverdns.in'  # Replace with your email provider's SMTP server
-EMAIL_PORT = 587  # Common port for SMTP
-EMAIL_USE_TLS = True  # Use TLS for secure connection
-EMAIL_USE_SSL = False  # Use SSL if required by your email provider
-EMAIL_HOST_USER = 'connect@roshandamor.site'
-EMAIL_HOST_PASSWORD = 'Roshan@1410'  # Replace with your email password
+EMAIL_HOST = 'mail.riyasaryam.me'  # Replace with your email provider's SMTP server
+EMAIL_PORT = 465  # Common port for SMTP
+EMAIL_USE_TLS = False  # Use TLS for secure connection
+EMAIL_USE_SSL = True  # Use SSL if required by your email provider
+EMAIL_HOST_USER = 'contact@riyasaryam.me'
+EMAIL_HOST_PASSWORD = 'RiyaSaryam@1310'  # Replace with your email password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
