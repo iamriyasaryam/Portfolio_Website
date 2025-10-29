@@ -121,10 +121,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.riyasaryam.me'  # Replace with your email provider's SMTP server
-EMAIL_PORT = 465  # Common port for SMTP
-EMAIL_USE_TLS = False  # Use TLS for secure connection
-EMAIL_USE_SSL = True  # Use SSL if required by your email provider
-EMAIL_HOST_USER = 'contact@riyasaryam.me'
-EMAIL_HOST_PASSWORD = 'RiyaSaryam@1310'  # Replace with your email password
+EMAIL_HOST = os.getenv("EMAIL_HOST", "mail.riyasaryam.me")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT", "465"))
+EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "False").lower() == "true"
+EMAIL_USE_SSL = os.getenv("EMAIL_USE_SSL", "True").lower() == "true"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "contact@riyasaryam.me")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
